@@ -12,10 +12,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Run linter
-      run: pip install flake8 && flake8 math_utils.py
-    
+    steps:    
     - name: Checkout code
       uses: actions/checkout@v2
     
@@ -31,3 +28,6 @@ jobs:
     
     - name: Run tests
       run: pytest
+
+    - name: Run linter
+      run: pip install flake8 && flake8 math_utils.py
