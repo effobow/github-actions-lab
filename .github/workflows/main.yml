@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Run linter
+      run: pip install flake8 && flake8 math_utils.py
+    
     - name: Checkout code
       uses: actions/checkout@v2
     
